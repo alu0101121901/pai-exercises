@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cala González</title>
+    <!-- Librerías de Materialize -->
+    <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified JavaScript -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Fuente de la página -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles-life.css"> -->
+    <script src="painter.js"></script>
+    <script src="circle.js"></script>
+    <script src="graphic-object.js"></script>
+    <script src="board.js"></script> 
+    <script defer src="bouncing-balls.js"></script>
+  
+  </head>
+  
+  <body class="blue-grey darken-4" >
+    <header class="hide-on-med-and-down" id="panel-header">
+      <nav>
+        <div class="nav-wrapper blue-grey darken-4">
+          <a class="brand-logo">Cala Gonzalez <b>Rafael</b> | Bouncing Balls</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../docs/index.html">Documentación</a></li>
+            <li><a href="cala-glez-rafael-life-test.html">Test</a></li>
+            <li><a href="../coverage/index.html">Coverage</a></li>
+            <li><a href="cala-glez-rafael-life-uml.html">UML</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="blue-grey darken-4" id="panel-bouncing">
+      <div class="row">
+        <div class="col s12 m10" id="canvas-container">
+          <canvas id="bouncing" style="border: 1px white solid;">
+
+          </canvas>
+        </div>
+        <div class="col s12 m2">
+          <button onclick="add()">aver</button>
+        </div>
+      </div>
+    </main>
+
+  </body>
+    
+</html>
