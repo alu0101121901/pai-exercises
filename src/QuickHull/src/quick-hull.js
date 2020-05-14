@@ -43,8 +43,6 @@ async function quickHull(pointsContainer, CTX) {
   convexHull.push(pointA);
 
   createSubSets(subSet1, subSet2, pointsContainer, pointA, pointB);
-  console.log(subSet1);
-  console.log(subSet2);
 
   findHull(subSet1, pointA, pointB, convexHull, CTX, pointsContainer);
   
@@ -312,7 +310,7 @@ function drawPoint(point, CTX) {
  */
 function generateRandomPoints(nPoints, pointsContainer, CTX, CANVAS) {
   for (let currentPointCreator = 0; currentPointCreator < nPoints; currentPointCreator++) {
-    point = {x: 0, y: 0};
+    let point = {x: 0, y: 0};
     pointsContainer.push(generatePoint(point, CANVAS));
     drawPoint(point, CTX);
   }

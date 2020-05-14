@@ -72,7 +72,7 @@ function getInputValue() {
   // Leemos los valores de velocidad y angulo desde el html
   let inputVelocity = document.getElementById("velocity").value;
   let inputAngle = document.getElementById("angle").value;
-  let inputFriction = document.getElementById("rozamiento").value;
+  let inputFriction = parseFloat(document.getElementById("rozamiento").value);
   let drawFlag = document.getElementById("cb");
   console.log(inputVelocity);
   console.log(inputAngle);

@@ -65,10 +65,9 @@ class Projectile {
    */
   maxHeight () {
     if (this.rozamiento_ !== 0) {
-      console.log("eeee");
       return (this.velocityY_ / this.rozamiento_) - (ACCELERATION / Math.pow(this.rozamiento_, 2)) * (Math.log(1 + ((this.rozamiento_ * this.velocityY_) / ACCELERATION)));
     }
-      const velSquare = Math.pow(this.velocity_, 2);
+    const velSquare = Math.pow(this.velocity_, 2);
     const sinAngleSquare = Math.pow(Math.sin(Math.PI * this.angle_ / 180), 2);
     const numerator = velSquare * sinAngleSquare;
     const den = 2 * ACCELERATION;
