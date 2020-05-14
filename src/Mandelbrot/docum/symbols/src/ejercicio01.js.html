@@ -1,0 +1,108 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"> <style>
+	.KEYW {color: #933;}
+	.COMM {color: #bbb; font-style: italic;}
+	.NUMB {color: #393;}
+	.STRN {color: #393;}
+	.REGX {color: #339;}
+	.line {border-right: 1px dotted #666; color: #666; font-style: normal;}
+	</style></head><body><pre><span class='line'>  1</span> <span class="COMM">/** Universidad de La Laguna
+<span class='line'>  2</span>    Escuela Superior de Ingeniería y Tecnología
+<span class='line'>  3</span>    Grado en Ingeniería Informática
+<span class='line'>  4</span>   Programación de Aplicaciones Interactivas
+<span class='line'>  5</span>    Curso: 3º
+<span class='line'>  6</span>    Práctica 7 PAI - Funciones
+<span class='line'>  7</span>    @author Rafael Cala González
+<span class='line'>  8</span>    Correo: alu0101121901@ull.es
+<span class='line'>  9</span>    @since 31/03/2020
+<span class='line'> 10</span>    @description Programa que se encarga de dibujar en el canvas una señal 
+<span class='line'> 11</span>    de tráfico de Prohibido el paso.
+<span class='line'> 12</span> */</span><span class="WHIT">
+<span class='line'> 13</span> 
+<span class='line'> 14</span> </span><span class="STRN">"use strict"</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 15</span> 
+<span class='line'> 16</span> </span><span class="COMM">/**
+<span class='line'> 17</span>  * @description Función que invoca 1 a 1 las formas necesarias
+<span class='line'> 18</span>  * para representar la señal de Prohibido el paso.
+<span class='line'> 19</span>  * @param {Object} CTX Contexto del canvas
+<span class='line'> 20</span>  * @param {Object} CANVAS Identificador del canvas
+<span class='line'> 21</span>  */</span><span class="WHIT">
+<span class='line'> 22</span> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="NAME">drawSign</span><span class="PUNC">(</span><span class="NAME">CTX</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">CANVAS</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 23</span> </span><span class="WHIT">  </span><span class="COMM">// Circulo rojo</span><span class="WHIT">
+<span class='line'> 24</span> </span><span class="WHIT">  </span><span class="NAME">let</span><span class="WHIT"> </span><span class="NAME">radiusRedCircle</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">CANVAS.width</span><span class="WHIT"> </span><span class="PUNC">*</span><span class="WHIT"> </span><span class="NUMB">0.40</span><span class="WHIT">
+<span class='line'> 25</span> </span><span class="WHIT">  </span><span class="NAME">drawCircle</span><span class="PUNC">(</span><span class="NAME">CTX</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">CANVAS.width</span><span class="WHIT"> </span><span class="PUNC">/</span><span class="WHIT"> </span><span class="NUMB">2</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">CANVAS.height</span><span class="WHIT"> </span><span class="PUNC">/</span><span class="WHIT"> </span><span class="NUMB">2</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">radiusRedCircle</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">Math.PI</span><span class="PUNC">*</span><span class="NUMB">2</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="STRN">"red"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 26</span> </span><span class="WHIT">  </span><span class="COMM">// Linea blanca</span><span class="WHIT">
+<span class='line'> 27</span> </span><span class="WHIT">  </span><span class="NAME">drawLine</span><span class="PUNC">(</span><span class="NAME">CTX</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">CANVAS.width</span><span class="WHIT"> </span><span class="PUNC">/</span><span class="WHIT"> </span><span class="NUMB">2</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">CANVAS.height</span><span class="WHIT"> </span><span class="PUNC">/</span><span class="WHIT"> </span><span class="NUMB">2</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">radiusRedCircle</span><span class="WHIT"> </span><span class="PUNC">-</span><span class="WHIT"> </span><span class="NUMB">10</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NUMB">0</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">Math.PI</span><span class="PUNC">*</span><span class="NUMB">2</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 28</span> </span><span class="WHIT">  </span><span class="COMM">// Rectángulo del centro</span><span class="WHIT">
+<span class='line'> 29</span> </span><span class="WHIT">  </span><span class="NAME">drawRect</span><span class="PUNC">(</span><span class="NAME">CTX</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">CANVAS.width</span><span class="WHIT"> </span><span class="PUNC">/</span><span class="WHIT"> </span><span class="NUMB">4</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">CANVAS.height</span><span class="WHIT"> </span><span class="PUNC">/</span><span class="WHIT"> </span><span class="NUMB">2</span><span class="WHIT"> </span><span class="PUNC">*</span><span class="WHIT"> </span><span class="NUMB">0.9</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">CANVAS</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 30</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 31</span> 
+<span class='line'> 32</span> </span><span class="COMM">/**
+<span class='line'> 33</span>  * @description
+<span class='line'> 34</span>  * @param {Object} CTX Contexto del canvas
+<span class='line'> 35</span>  * @param {Number} px Coordenada x
+<span class='line'> 36</span>  * @param {Number} py Coordenada y
+<span class='line'> 37</span>  * @param {Object} CANVAS Identificador del canvas
+<span class='line'> 38</span>  */</span><span class="WHIT">
+<span class='line'> 39</span> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="NAME">drawRect</span><span class="PUNC">(</span><span class="NAME">CTX</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">px</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">py</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">CANVAS</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 40</span> </span><span class="WHIT">  </span><span class="NAME">CTX.beginPath</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 41</span> </span><span class="WHIT">  </span><span class="NAME">CTX.fillStyle</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">'white'</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 42</span> </span><span class="WHIT">  </span><span class="NAME">CTX.rect</span><span class="PUNC">(</span><span class="NAME">px</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">py</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">CANVAS.width</span><span class="WHIT"> </span><span class="PUNC">*</span><span class="WHIT"> </span><span class="NUMB">0.5</span><span class="WHIT"> </span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">CANVAS.height</span><span class="WHIT"> </span><span class="PUNC">*</span><span class="WHIT"> </span><span class="NUMB">0.12</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NUMB">15</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 43</span> </span><span class="WHIT">  </span><span class="NAME">CTX.stroke</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 44</span> </span><span class="WHIT">  </span><span class="NAME">CTX.fill</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 45</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 46</span> 
+<span class='line'> 47</span> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="NAME">drawRoundedRect</span><span class="PUNC">(</span><span class="NAME">CTX</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">CANVAS</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">px</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">py</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 48</span> </span><span class="WHIT">  
+<span class='line'> 49</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 50</span> 
+<span class='line'> 51</span> </span><span class="COMM">/**
+<span class='line'> 52</span>  * @description Función que se encarga de dibujar la línea blanca
+<span class='line'> 53</span>  * de la señal de prohibido el paso.
+<span class='line'> 54</span>  * @param {Object} CTX Contexto del canvas
+<span class='line'> 55</span>  * @param {Number} px Coordenada x
+<span class='line'> 56</span>  * @param {Number} py Coordenada y
+<span class='line'> 57</span>  * @param {Number} radius Radio del círculo
+<span class='line'> 58</span>  * @param {Number} start Punto desde el que se empieza a trazar
+<span class='line'> 59</span>  * el arco.
+<span class='line'> 60</span>  * @param {Number} end Punto en el que se termina de trazar el arco.
+<span class='line'> 61</span>  */</span><span class="WHIT">
+<span class='line'> 62</span> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="NAME">drawLine</span><span class="PUNC">(</span><span class="NAME">CTX</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">px</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">py</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">radius</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">start</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">end</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 63</span> </span><span class="WHIT">  </span><span class="NAME">CTX.beginPath</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 64</span> </span><span class="WHIT">  </span><span class="NAME">CTX.arc</span><span class="PUNC">(</span><span class="NAME">px</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">py</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">radius</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">start</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">end</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 65</span> </span><span class="WHIT">  </span><span class="NAME">CTX.lineWidth</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NUMB">5</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 66</span> </span><span class="WHIT">  </span><span class="NAME">CTX.strokeStyle</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="STRN">'#FFFFFF'</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 67</span> </span><span class="WHIT">  </span><span class="NAME">CTX.stroke</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 68</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 69</span> 
+<span class='line'> 70</span> </span><span class="COMM">/**
+<span class='line'> 71</span>  * @description Función que dibuja el círculo rojo de la señal de prohibido
+<span class='line'> 72</span>  * el paso.
+<span class='line'> 73</span>  * @param {Object} CTX Contexto del canvas
+<span class='line'> 74</span>  * @param {Number} px Coordenada x
+<span class='line'> 75</span>  * @param {Number} py Coordenada y
+<span class='line'> 76</span>  * @param {Number} radius Radio del círculo
+<span class='line'> 77</span>  * @param {Number} start Punto desde el que se empieza a trazar
+<span class='line'> 78</span>  * el arco.
+<span class='line'> 79</span>  * @param {Number} end Punto en el que se termina de trazar el arco.
+<span class='line'> 80</span>  * @param {String} color Color con el que se quiere dibujar el círculo
+<span class='line'> 81</span>  */</span><span class="WHIT">
+<span class='line'> 82</span> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="NAME">drawCircle</span><span class="PUNC">(</span><span class="NAME">CTX</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">px</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">py</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">radius</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">start</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">end</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">color</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 83</span> </span><span class="WHIT">  </span><span class="NAME">CTX.beginPath</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 84</span> </span><span class="WHIT">  </span><span class="NAME">CTX.arc</span><span class="PUNC">(</span><span class="NAME">px</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">py</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">radius</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">start</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">end</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 85</span> </span><span class="WHIT">  </span><span class="NAME">CTX.fillStyle</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="TOKN">`</span><span class="NAME">$</span><span class="PUNC">{</span><span class="NAME">color</span><span class="PUNC">}</span><span class="TOKN">`</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 86</span> </span><span class="WHIT">  </span><span class="NAME">CTX.fill</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 87</span> </span><span class="WHIT">  </span><span class="NAME">CTX.stroke</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 88</span> </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'> 89</span> 
+<span class='line'> 90</span> </span><span class="COMM">/**
+<span class='line'> 91</span>  * @description Función que es invocada desde el HTML y ejecuta las funciones
+<span class='line'> 92</span>  * necesarias para el funcionamiento del ejercicio.
+<span class='line'> 93</span>  */</span><span class="WHIT">
+<span class='line'> 94</span> </span><span class="KEYW">function</span><span class="WHIT"> </span><span class="NAME">main</span><span class="PUNC">(</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 95</span> </span><span class="WHIT">  </span><span class="KEYW">const</span><span class="WHIT"> </span><span class="NAME">CANVAS</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">document.getElementById</span><span class="PUNC">(</span><span class="STRN">"ejercicio"</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 96</span> </span><span class="WHIT">  </span><span class="KEYW">if</span><span class="PUNC">(</span><span class="NAME">CANVAS.getContext</span><span class="PUNC">)</span><span class="WHIT"> </span><span class="PUNC">{</span><span class="WHIT">
+<span class='line'> 97</span> </span><span class="WHIT">    </span><span class="KEYW">const</span><span class="WHIT"> </span><span class="NAME">CTX</span><span class="WHIT"> </span><span class="PUNC">=</span><span class="WHIT"> </span><span class="NAME">CANVAS.getContext</span><span class="PUNC">(</span><span class="STRN">'2d'</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 98</span> </span><span class="WHIT">    </span><span class="NAME">drawSign</span><span class="PUNC">(</span><span class="NAME">CTX</span><span class="PUNC">,</span><span class="WHIT"> </span><span class="NAME">CANVAS</span><span class="PUNC">)</span><span class="PUNC">;</span><span class="WHIT">
+<span class='line'> 99</span> </span><span class="WHIT">  </span><span class="PUNC">}</span><span class="WHIT">
+<span class='line'>100</span> 
+<span class='line'>101</span> </span><span class="PUNC">}</span></pre></body></html>

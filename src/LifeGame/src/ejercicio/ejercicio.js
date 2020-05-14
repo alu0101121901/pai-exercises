@@ -73,7 +73,7 @@ function west() {
  * @description Método que mueve el objeto gráfico 5 píxeles al este
  */
 function east() {
-  const PIXELS_OFFSET = document.getElementById("number").value;
+  const PIXELS_OFFSET = parseInt(document.getElementById("number").value);
   let value = 0;
   value = value + PIXELS_OFFSET;
   const NEW_TEXT = document.getElementById("nPixeles");  
