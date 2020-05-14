@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cala González</title>
+    <!-- Fuente de la página -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    
+    <link rel="stylesheet" type="text/css" href="css/styles-chess.css">
+
+    <script src="painter.js"></script>
+    <script src="card.js"></script>
+    <script src="cardset.js"></script>
+    <script src="hand.js"></script>
+    <script src="poker-hand.js"></script>
+    <script src="deck.js"></script>
+    <script src="pokerOutput.js"></script>
+    <script async defer src="poker.js"></script>  
+  
+  </head>
+  
+  <body>
+    <!-- <header>
+      <h1>Cala González Rafael | Chess</h1><div class="enlaces-header">&nbsp;&nbsp; <b> <a href="#">JUGAR</a> <a href="#">APRENDER</a> <a href="#">OBSERVAR</a> <a href="#">COMUNIDAD</a> <a href="#">HERRAMIENTAS</a></b></div>
+      <div id="inicio-sesion"> <i class="material-icons">search</i> &nbsp;&nbsp; <i class="material-icons">settings</i> &nbsp;&nbsp;&nbsp; <a href="#">INICIAR SESIÓN</a> </div>
+    </header> -->
+    <canvas id="pokerGame" height="750" width="1500" style="background-color: aquamarine;">
+      
+    </canvas>
+    <br><br>
+    <button id="giveHand" type="button" onclick="giveHands();">
+      Repartir mano
+    </button><br><br>   
+    <footer>
+      <h3 id="title-footer">PROGRAMACIÓN APLICACIONES INTERACTIVAS</h3>
+      <div id="infoPractica">
+        <h3>Información de la práctica</h3>
+        <b><a href="https://es.wikipedia.org/wiki/Ajedrez">Ajedrez</a><br><br>
+        <a href="https://en.wikipedia.org/wiki/Algebraic_notation_(chess)">Notación algebraica</a></b>
+      </div>
+      <div id="enlaces-interes">
+        <h3>Enlaces de interés</h3>
+        <b><a href="https://en.wikipedia.org/wiki/Model–view–controller">Modelo Vista-Computador</a><br><br>
+        <a href="https://www.ull.es">Universidad de La Laguna</a></b>
+      </div>
+    </footer>
+  </body>
+    
+</html>

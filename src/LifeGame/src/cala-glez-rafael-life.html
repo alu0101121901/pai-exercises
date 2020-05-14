@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cala González</title>
+    <!-- Librerías de Materialize -->
+    <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified JavaScript -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Fuente de la página -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    
+    <link rel="stylesheet" type="text/css" href="css/styles-life.css">
+     
+
+    <script src="painter.js"></script>
+    <script src="board.js"></script>
+    <script src="matrix.js"></script>
+    <script src="life-controller.js"></script>
+    <script src="life-view.js"></script>
+    <script src="life-model.js"></script>
+    <script async defer src="life.js"></script>
+    <script defer src="js/modal.js"></script>  
+  
+  </head>
+  
+  <body>
+    <header class="hide-on-med-and-down">
+      <nav>
+        <div class="nav-wrapper purple">
+          <a class="brand-logo">Cala Gonzalez <b>Rafael</b> | Conway's Game of Life</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../docs/index.html">Documentación</a></li>
+            <li><a href="cala-glez-rafael-life-test.html">Test</a></li>
+            <li><a href="../coverage/index.html">Coverage</a></li>
+            <li><a href="cala-glez-rafael-life-uml.html">UML</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="row">
+        <div class="col s12 m3 l3" id="input-data">
+          <div class="row card-panel">
+            <div class="col s12">
+              <a class="waves-effect waves-light btn purple darken-1" id="start">INICIO</a>
+            </div>
+            <div class="col s12">
+              <a class="waves-effect waves-light btn purple darken-1" id="end">FIN</a>
+            </div>
+            <div class="col s12">
+              <a class="waves-effect waves-light btn purple darken-1" id="pause">PAUSA</a>
+            </div>
+            <div class="col s12">
+              <a class="waves-effect waves-light btn purple darken-1" id="step">PASO</a>
+            </div>
+          </div>
+          <div class="row card-panel">
+            <div class="col s10 m8 offset-m2 offset-l2">
+              <input value="600" id="initialCells" type="number" max="625" min="50" class="validate">
+              <label for="initialCells">Número de celulas inicial</label>
+            </div>
+            <div class="col s10 m10 offset-m1 offset-l1">
+              <p class="range-field">
+                <input type="range" id="velocity" min="1" max="10" />
+                <label for="velocity">Velocidad del juego</label>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s10 m5 offset-s1 offset-m1 offset-l1" id="canvas-container">
+          <canvas id="lifeBoard">
+          </canvas>
+        </div>
+        <div class="col s10 m2 offset-s1 offset-m1">
+          <div class="row card-panel center-align">
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn modal-trigger purple" href="#modal1">Reglas del juego</a>
+
+             <!-- Modal Structure -->
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <h4>Reglas del juego</h4>
+                <p>
+                  1. Cualquier célula viva con dos o tres vecinos vivos sobrevive. <br>
+                  2. Cualquier célula muerta con tres vecinos vivos se convierte en una célula viva. <br>
+                  3. Todas las demás células vivas mueren en la siguiente generación. <br>
+                     Del mismo modo, todas las demás células muertas permanecen muertas.
+                </p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Entendido</a>
+            </div>
+          </div>
+        </div>
+        <div class="row card-panel center-align">
+          <!-- Modal Trigger -->
+          <a class="waves-effect waves-light btn modal-trigger purple" href="#modal2">Modo de uso</a>
+
+           <!-- Modal Structure -->
+          <div id="modal2" class="modal">
+            <div class="modal-content">
+              <h4>Modo de uso</h4>
+              <p id="modo-uso">
+                Para iniciar el juego de la vida, debemos indicar un número inicial de células, cuyo 
+                valor por defecto es 600. Podremos ejecutar el juego de dos formas: <br>
+                INICIO: Ejecutará el juego de la vida hasta que el usuario decida pausar, finalizar o comenzar a jugar paso a paso. <br>
+                PASO: Ejecutará el juego de la vida, pero solo ejecutará un ciclo del mismo. <br> <br>
+                Podremos también modificar la velocidad de juego.
+              </p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Entendido</a>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </main>
+
+  </body>
+    
+</html>

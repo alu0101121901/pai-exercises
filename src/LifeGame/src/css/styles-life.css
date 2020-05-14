@@ -1,0 +1,95 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color:#e1bee7;
+}
+
+a {
+ text-decoration: none;
+ color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  margin-top: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#modo-uso {
+  text-align: justify;
+}
+
+main {
+  padding-top: 1vh;
+}
+
+#input-data {
+ padding-top: 2%;
+
+}
+
+#input-data a:hover {
+  text-decoration: none;
+  background-color: #e1bee7;
+}
+
+#input-data a {
+  width: 100%;
+  margin-top: 2%;
+}
+
+#main-uml {
+  padding-top: 2vh;
+}
+
+#canvas-container {
+  flex-grow: 1;
+}
+
+#lifeBoard {
+  background-color: black;
+  box-shadow: 2px 2px 3px grey;
+}
+
+#output {
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 1px grey;
+}
+
+footer {
+
+  background-color: cadetblue;
+  margin-top: 5%;
+  padding: 1% 1%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer h3 {
+  text-decoration: underline;
+}
+
+#infoPractica {
+  text-align: center;
+}
+
+#enlaces-interes {
+  text-align: center;
+}
+
+#title-footer {
+  padding-top: auto;
+  text-decoration: none;
+}
+

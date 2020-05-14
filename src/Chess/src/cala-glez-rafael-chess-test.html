@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Cala González Rafael </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+</head>
+
+<body>
+  <h1>Cala González Rafael</h1>
+  <h2 style="padding:2%; background-color: skyblue;">Dado el escaso tiempo que me quedaba, y al tratarse de algo que ya se ha evaluado en una práctica anterior,
+    sumado a que el cubrimiento que me daba en ellas con el testing de ChessController ronda el 80%, he optado por no hacer testing de las clases correspondientes 
+    a las 8 reinas. <br><br>
+    Por otro lado, el hecho de que ChessModel invoque métodos de ChessView, que invoca métodos de Board, que finalmente usa el canvas y el contexto
+    para hacer el pintado en el canvas, se me ha dificultado hacer testeo de sus métodos.
+  </h2>
+  <p><a href="../index.html">Home</a> </p>
+  <div id="mocha"></div>
+
+  <script src="https://unpkg.com/chai/chai.js"></script>
+  <script src="https://unpkg.com/mocha/mocha.js"></script>
+
+  <script class="mocha-init">
+    mocha.setup('bdd');
+    mocha.checkLeaks();
+  </script>
+    <script src="painter.js"></script>
+    <script src="output.js"></script>
+    <script src="board.js"></script>
+    <script src="matrix.js"></script>
+    <script src="general-eight-queens.js"></script>
+    <script src="classic-eight-queens.js"></script>
+    <script src="strategy-manager.js"></script>
+    <script src="chess-controller.js"></script>
+    <script src="chess-view.js"></script>
+    <script src="chess-model.js"></script>
+    <script src="chess.js"></script>  
+    <script src="../test/tests.js"></script>
+
+  <script class="mocha-exec">
+    mocha.run();
+  </script>
+</body>
+
+</html>

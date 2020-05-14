@@ -1,0 +1,100 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #EDEBE9;
+}
+
+a {
+ text-decoration: none;
+ color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  margin-top: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 25px;
+}
+
+#inicio-sesion {
+  align-items: stretch;
+  text-align: right;
+  vertical-align: middle;
+  flex-grow: 1;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  
+}
+
+#input-data {
+  background-color: whitesmoke;
+  padding: 1% 3%;
+  box-shadow: 2px 2px 1px grey;
+}
+
+#input-data button {
+  width: 100%;
+  margin-left: auto;
+  padding: 4% 0%;
+  background-color: thistle;
+}
+
+#input-data button:hover {
+  background-color: slateblue;
+  color:wheat
+}
+
+#chessBoard {
+  background-color: white;
+  box-shadow: 2px 2px 3px grey;
+}
+
+#output {
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 1px grey;
+}
+
+footer {
+
+  background-color: cadetblue;
+  margin-top: 5%;
+  padding: 1% 1%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer h3 {
+  text-decoration: underline;
+}
+
+#infoPractica {
+  text-align: center;
+}
+
+#enlaces-interes {
+  text-align: center;
+}
+
+#title-footer {
+  padding-top: auto;
+  text-decoration: none;
+}
+
