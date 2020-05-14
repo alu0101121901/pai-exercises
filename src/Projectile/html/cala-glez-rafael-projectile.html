@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cala González</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption&display=swap" rel="stylesheet">     
+    
+    <link rel="stylesheet" type="text/css" href="../css/styles-projectile.css">
+
+    <script src="../src/painter.js"></script>
+    <script src="../src/graph.js"></script>
+    <script src="../src/throw-projectile.js"></script>
+    <script src="../src/projectile-graph.js"></script>
+    <script src="../src/output.js"></script>
+    <script async defer src="../src/projectile.js"></script>  
+  
+  </head>
+  
+  <body>
+    <header>
+      <h1>Cala González Rafael | Projectile</h1>
+    </header>
+
+    <canvas id="parte1" height="675" width="1480"> 
+      <p>
+        Default text. The browser is not compatible with canvas
+      </p>
+    </canvas>
+
+    <div class="input-data">
+      <h2>Datos de entrada y salida</h2>
+      <div class="entrada">
+        <label for="velocity">VELOCIDAD: </label>
+        <input type="text" id="velocity" name="vel"><br><br>
+        <label for="angle">ÁNGULO: </label>
+        <input type="text" id="angle" name="ang"><br><br>
+       <label for="rozamiento">ROZAMIENTO: </label>
+        <input type="number" step="any" id="rozamiento" name="b"><br><br>
+        <input type="checkbox" name="opt" id="cb" checked>
+        <label for="cb">Dibujar trayectoria del proyectil</label><br>
+        <button id="run" type="button" onclick="getInputValue();">
+          LANZAR PROYECTIL
+        </button>
+        <button id="run" type="button" onclick="getInputValueEJ1();">
+          EJERCICIO 2
+        </button>
+      </div>
+      <canvas id="parte2" height="150" width="500"> 
+        <p>
+          Default text. The browser is not compatible with canvas
+        </p>
+      </canvas>
+    </div>
+
+    <div class="informacion">
+      <div>
+        <h2>Explicación de la práctica</h2>
+        <p><em>Se denomina movimiento parabólico al realizado por un objeto cuya trayectoria describe
+           una parábola. Se corresponde con la trayectoria ideal de un proyectil que se mueve en un 
+           medio que no ofrece resistencia al avance y que está sujeto a un campo gravitatorio uniforme.</em></p>
+      </div>
+      <div>
+        <h2>Funcionamiento interno de la práctica</h2>
+        <p>
+          &nbsp; El usuario deberá introducir varios parámetros de entrada para la ejecución del programa: una velocidad, que siempre deberá ser
+          mayor que 0, un ángulo entre 1 y 90, e indicar si desea que se escriba la trayectoria del proyectil en una gráfica. Una vez se introduzcan
+          estos valores, deberá pulsar en el botón "LANZAR PROYECTIL", que enviará los datos a las clases usadas en el programa. En este punto, 
+          pueden suceder dos cosas dependiendo de si el usuario decidió que se dibujara la trayectoria en el lienzo superior o no.
+          <br><br>
+
+          &nbsp; En el primer caso, se dibujará una gráfica, que se escalará dinámicamente solo con el lanzamiento del primer proyectil (el resto de
+          lanzamientos quedarán sujetos a esta escala). Inmediatamente se dibujará la trayectoria del proyectil, que en esencia, lo que hace es dibujar
+          el punto en el que se encuentra en un tiempo t repetidas veces hasta que la altura de Y sea 0, es decir, deje de estar en el aire. Cada trayectoria
+          de un nuevo lanzamiento se pintará de un color distinto, asignado aleatoriamente. Finalmente, en el <b> lienzo inferior se escribirán los parámetros 
+          de altura máxima, distancia recorrida, y tiempo máximo del proyectil en el aire.</b><br><br>
+
+          &nbsp; En el segundo caso, no se dibujará ninguna gráfica, y solo se escribirán los datos remarcados en negrita en el párrafo anterior.
+        </p>
+      </div>
+      <div>
+        <h2>Enlaces de referencia</h2>
+        <p id="enlaces">
+         <a href="https://es.wikipedia.org/wiki/Movimiento_parabólico">- ¿Que es el movimiento parabólico?</a><br><br>
+         <a href="http://galia.fc.uaslp.mx/~medellin/Applets/Tiro/Tiro.htm">- Ecuaciones de movimiento de tiro parabólico</a><br><br>
+         <a href="https://www.ck12.org/c/physics/projectile-motion-for-an-object-launched-at-an-angle/lesson/Projectile-Motion-for-an-Object-Launched-at-an-Angle-PHYS/">- Ejemplos de cálculos de tiro parabólico</a>
+        </p>
+      </div>
+    </div>
+
+    </div>
+  </body>
+    
+</html>

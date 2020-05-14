@@ -3,3 +3,8 @@
   flex-wrap: wrap;
   min-height: 100vh;
 }
+
+body {
+  background-image: url("../../img/background-index2.jpg");
+  background-size: cover;
+}

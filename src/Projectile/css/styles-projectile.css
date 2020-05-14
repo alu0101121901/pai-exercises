@@ -1,0 +1,66 @@
+body {
+  font-family: 'PT Serif Caption', serif;
+  background-color: black;
+}
+
+h1, h2 {
+  text-align: center;
+  background-color: white;
+}
+
+p {
+  text-align: justify;
+  background-color: grey;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.input-data {
+  background-color: skyblue;
+}
+
+#run {
+  background-color: red;
+  border: 3px solid black;
+  font-size: 22px;
+  padding: 1%;
+}
+
+#run:hover {
+  background-color: darkred;
+  border-color: white;
+  color: white;
+}
+
+#parte1 {
+  background-color: grey;
+}
+
+#parte2 {
+  background-color: grey;
+}
+
+.informacion {
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: white;
+}
+
+#enlaces {
+  text-align: center;
+}
+
+#enlaces a {
+  background-color: springgreen;
+}
+
+.uml {
+  background-color: white;
+  padding:20%;
+}
+
+.title-exercise {
+  text-align: justify;
+}

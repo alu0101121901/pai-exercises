@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cala González</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/styles-random-walk.css">
+    <script src="../src/painter.js"></script>
+    <script src="../src/grid.js"></script>
+    <script src="../src/random-step.js"></script>
+    <script async defer src="../src/random-walk.js"></script>  
+  </head>
+  <body>
+    <h1>Cala González Rafael | Práctica 9. Random Walk</h1>
+    <canvas id="randomwalk" height="675" width="1480" style="background-color: white; border: 5px solid red;"> <!-- Los estilos se tendrían que aplicar en el archivo css -->
+      <p>Default text. The browser is not compatible with canvas</p></canvas>
+    <div class="informacion">
+      <div>
+        <h2>Explicación de la práctica</h2>
+        <p><em>El <a href="https://en.wikipedia.org/wiki/Random_walk">camino aleatorio</a> o paseo aleatorio, abreviado en inglés como RW (Random Walks), 
+          es una formalización matemática de la trayectoria que resulta de hacer sucesivos 
+          pasos aleatorios. Por ejemplo, la ruta trazada por una molécula mientras viaja por 
+          un líquido o un gas, el camino que sigue un animal en su búsqueda de comida, el 
+          precio de una acción fluctuante y la situación financiera de un jugador pueden 
+          tratarse como un camino aleatorio.</em></p>
+      </div>
+      <div>
+        <h2>Funcionamiento interno de la práctica</h2>
+        <p>
+          &nbsp; Tras dibujar la cuadrícula en el canvas, se sitúa un punto en el centro como marcado del inicio del algoritmo. Posteriormente
+          se comienza la ejecución del Random Walk. Se elige un sentido aleatorio en cada paso y se traza una línea desde el punto actual 
+          hasta el siguiente.<br><br>
+
+          &nbsp; A fin de evitar de que se pueda tener la sensación de que el walker no avanza, -esto es, en realidad, que se desplaza a lugares por 
+          donde ya se ha trazado una línea, se traza una línea roja en primer lugar para saber siempre que desplazamiento, y acto seguido se
+          pinta de azul.<br><br>
+
+          &nbsp; Cuando el walker se encuentra con alguna de las paredes del canvas, termina la ejecución del script, lanzando una alerta informando
+          sobre ello, imprimiendo además el número de pasos dados.
+        </p>
+      </div>
+      <div>
+        <h2>Enlaces de referencia</h2>
+        <p id="enlaces">
+         <a target="blank_" href="https://en.wikipedia.org/wiki/Random_walk">- ¿Que es el camino aleatorio?</a><br><br>
+         <a target="blank_" href="https://upload.wikimedia.org/wikipedia/commons/f/f3/Random_walk_2500_animated.svg">- Ejemplo de ejecución</a>
+        </p>
+      </div>
+    </div>
+  </body>
+    
+</html>

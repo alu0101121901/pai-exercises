@@ -1,0 +1,39 @@
+
+
+body {
+  font-family: 'PT Serif Caption', serif;
+  background-color: black;
+}
+
+h1, h2 {
+  text-align: center;
+  background-color: white;
+}
+
+p {
+  text-align: justify;
+  background-color: skyblue;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.informacion {
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: white;
+}
+
+#enlaces {
+  text-align: center;
+}
+
+#enlaces a {
+  background-color: springgreen;
+}
+
+.uml {
+  background-color: white;
+  padding:20%;
+}
