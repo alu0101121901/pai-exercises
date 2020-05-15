@@ -3,7 +3,7 @@
  * Grado en Ingeniería Informática
  * Asignatura: Programación de Aplicaciones Interactivas
  * Curso: 3º
- * Práctica 12 PAI - Life
+ * Práctica 13 PAI - Bouncing Balls
  * @file graphic-object.js
  * @author Rafael Cala
  * Correo: alu0101121901@ull.edu.es
@@ -14,14 +14,12 @@
 
 "use strict";
 
-let ClassPainterForGraphicObject, ClassCircle;
+let ClassPainterForGraphicObject;
 if (typeof require !== 'undefined') {
-  ClassPainterForGraphicObject = require('../../src/painter.js').Painter;
-  ClassCircle = require('../../src/painter.js').Circle;
+  ClassPainterForGraphicObject = require('../../src/Bouncing-Balls/painter.js').Painter;
 }
 else {
   ClassPainterForGraphicObject = Painter;
-  ClassCircle = Circle;
 }
 
 
@@ -30,63 +28,27 @@ else {
  * @description Clase que representa un objeto gráfico dentro de un canvas.
  */
 class GraphicObject extends ClassPainterForGraphicObject {
-  constructor(CANVAS, CTX, velocity, pointX, pointY, color, colorToClear) {
+  /**
+   * @description Inicializa la forma del objeto gráfico, el punto inicial,
+   * y el radio del objeto.
+   * @param {Object} CANVAS Canvas
+   * @param {Object} CTX Contexto del canvas
+   * @param {Number} velocity Velocidad que tendrá el objeto gráfico
+   * @param {Number} pointX Punto X de inicio
+   * @param {Number} pointY Punto Y de inicio
+   * @param {String} color Color del objeto gráfico
+   */
+  constructor(CANVAS, CTX, pointX, pointY) {
     super(CANVAS, CTX);
-    this.object_ = new ClassCircle (CANVAS, CTX, color);
-    this.colorToClear_ = colorToClear;
-    this.velocityX_ = velocity;
-    this.velocityY_ = velocity;
     this.currentCoordinates_ = {x: pointX, y: pointY};
-    this.radius_ = this.width_ * 0.01;
-    this.initialize();
   }
-
   /* istanbul ignore next */
   /**
-   * @description Método que inicializa el objeto gráfico y lo sitúa en el medio
+   * @description Método que dibuja el objeto gráfico y lo sitúa en el
+   * punto que tiene como atributo
    */
-  initialize() {
-    this.object_.draw(this.currentCoordinates_.x, this.currentCoordinates_.y, this.radius_, 0, 2 * Math.PI, true);
-  }
-
-  /* instanbul ignore next */
-  /**
-   * @description Método que actualiza la posición del objeto en el canvas.
-   * @param {Number} xPoints Número de pixeles que se desplaza en eje x
-   * @param {*} yPoints Número de pixeles que se desplaza en eje y
-   */
-  move(xPoints = 1, yPoints = 1) {
-    if ((this.currentCoordinates_.x + this.radius_) >= this.width_)
-      this.velocityX_ = -this.velocityX_;
-    if ((this.currentCoordinates_.x - this.radius_) <= 0)
-      this.velocityX_ = - this.velocityX_;
-    if ((this.currentCoordinates_.y + this.radius_) >= this.height_)
-      this.velocityY_ = - this.velocityY_;
-    if ((this.currentCoordinates_.y - this.radius_) <= 0)
-      this.velocityY_ = - this.velocityY_;
-
-    this.currentCoordinates_.x += this.velocityX_;
-    this.currentCoordinates_.y += this.velocityY_; 
-    // this.clearPreviousPosition();
-    this.object_.draw(this.currentCoordinates_.x, this.currentCoordinates_.y, this.radius_, 0, 2 * Math.PI, true);
-  }
-
-  isOnBoard() {
-    if (((this.currentCoordinates_.x + this.radius_) >= this.width_) || ((this.currentCoordinates_.x - this.radius_) <= 0)
-     || ((this.currentCoordinates_.y + this.radius_) >= this.height_) || ((this.currentCoordinates_.x - this.radius_) <= 0))
-      return false;
-    return true;
-  }
-
-  
-  /* instanbul ignore next */
-  /**
-   * @description Método que limpia el canvas.
-   */
-  clearPreviousPosition() {
-    this.ctx_.fillStyle = this.colorToClear_;
-    this.ctx_.clearRect(this.currentCoordinates_.x - this.radius_, this.currentCoordinates_.y - this.radius_,
-       this.currentCoordinates_.x + this.radius_, this.currentCoordinates_.y + this.radius_);
+  draw() {
+    
   }
 }
 

@@ -3,8 +3,8 @@
  * Grado en Ingeniería Informática
  * Asignatura: Programación de Aplicaciones Interactivas
  * Curso: 3º
- * Práctica 12 PAI - Life
- * @file graphic-object.js
+ * Práctica 13 PAI - Bouncing Ball
+ * @file circle.js
  * @author Rafael Cala
  * Correo: alu0101121901@ull.edu.es
  * @since 12/05/20
@@ -14,29 +14,28 @@
 
 "use strict";
 
-
-let ClassPainterForCircle;
+let ClassGraphicObject;
 if (typeof require !== 'undefined') {
-  ClassPainter = require('../../src/painter.js').Painter;
-  // ClassCircle = require('../../src/painter.js').Circle;
+  ClassGraphicObject = require('../../src/Bouncing-Balls/graphic-object.js').GraphicObject;
+
 }
 else {
-  ClassPainterForCircle = Painter;
-  // ClassCircle = Circle;
+  ClassGraphicObject = GraphicObject;
 }
 
 /**
  * @class Circle
  * @description Clase cuya funcionalidad es representar un círculo en el canvas
  */
-class Circle extends ClassPainterForCircle {
+class Circle extends ClassGraphicObject {
   /**
    * @param {Object} CANVAS Canvas
    * @param {Object} CTX Contexto del canvas
    */
-  constructor(CANVAS, CTX, color) {
-    super(CANVAS, CTX);
+  constructor(CANVAS, CTX, pointX, pointY, radius, color) {
+    super(CANVAS, CTX, pointX, pointY);
     this.colour_ = color;
+    this.radius_ = radius;
   }
 
   /* istanbul ignore next */
@@ -49,13 +48,11 @@ class Circle extends ClassPainterForCircle {
    * @param {Number} end 
    * @param {Number} isFilled 
    */
-  draw(originPointX, originPointY, radius, start, end, isFilled = false) {
+  draw() {
     this.ctx_.beginPath();
-    this.ctx_.arc(originPointX, originPointY, radius, start, end, false);
-    if (isFilled) {
-      this.ctx_.fillStyle = this.colour_;
-      this.ctx_.fill();  
-    }  
+    this.ctx_.arc(this.currentCoordinates_.x, this.currentCoordinates_.y, this.radius_, 0, Math.PI * 2, false);
+    this.ctx_.fillStyle = this.colour_;
+    this.ctx_.fill();  
   }
 }
 

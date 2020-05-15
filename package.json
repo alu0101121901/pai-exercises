@@ -1,0 +1,44 @@
+{
+  "name": "pai-p13-bouncing-ball-alu21901",
+  "version": "1.0.0",
+  "description": "http://10.6.128.243:8080",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "nyc mocha",
+    "test:watch": "mocha --watch --reporter min",
+    "test:debug": "node --inspect node_modules/mocha/bin/_mocha --watch --no-timeouts",
+    "start": "node web-server/app.js",
+    "coverage": "nyc --reporter html npm test"
+  },
+  "devDependencies": {
+    "babel-plugin-istanbul": "^6.0.0",
+    "chai": "3.5.0",
+    "chai-match": "^1.1.1",
+    "chai-string": "^1.5.0",
+    "chai-things": "^0.2.0",
+    "gulp": "^4.0.2",
+    "gulp-shell": "^0.8.0",
+    "mocha": "^7.1.1",
+    "nyc": "^15.0.1"
+  },
+  "dependencies": {
+    "cheerio": "0.22.0",
+    "express": "^4.17.1",
+    "jsdoc": "^3.6.4",
+    "node-dir": "0.1.16"
+  },  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-ESIT-INF-PAI-2019-2020/pai-p13-bouncing-ball-alu21901.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-INF-PAI-2019-2020/pai-p13-bouncing-ball-alu21901/issues"
+  },
+  "homepage": "https://github.com/ULL-ESIT-INF-PAI-2019-2020/pai-p13-bouncing-ball-alu21901#readme"
+}

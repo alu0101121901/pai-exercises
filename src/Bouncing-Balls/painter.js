@@ -40,10 +40,6 @@ class Painter {
     this.canvas_ = canvas;
     this.ctx_ = ctx;
   }
-
-  get width () {
-    return this.width_;
-  }
 }
 
 /**
