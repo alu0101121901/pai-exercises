@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cala González</title>
+    <!-- Librerías de Materialize -->
+    <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified JavaScript -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Fuente de la página -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles-life.css"> -->
+    <script src="../src/painter.js"></script>
+    <script src="../src/graph.js"></script>
+    <script src="../src/throw-projectile.js"></script>
+    <script src="../src/projectile-graph.js"></script>
+    <script src="../src/output.js"></script>
+    <script async defer src="../src/projectile.js"></script>  
+  
+  </head>
+  
+  <body class="blue-grey darken-4" >
+    <header class="hide-on-med-and-down" id="panel-header">
+      <nav>
+        <div class="nav-wrapper blue-grey darken-4">
+          <a class="brand-logo">Cala Gonzalez <b>Rafael</b> | Projectile</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../docs/index.html">Documentación</a></li>
+            <li><a href="cala-glez-rafael-life-test.html">Test</a></li>
+            <li><a href="../coverage/index.html">Coverage</a></li>
+            <li><a href="cala-glez-rafael-life-uml.html">UML</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="blue-grey darken-4" id="panel-bouncing">
+      <div class="row">
+        <div class="col s12 m9" id="canvas-container">
+          <canvas id="parte1" height="675" width="1100" style="background-color: grey;">
+
+          </canvas>
+        </div>
+        <div class="col s12 m3">
+          <div class="row card-panel center-align">
+            <div class="col s10 m8 offset-m2 offset-l2">
+              <input value="100" id="velocity" type="number" class="validate">
+              <label for="velocity">Velocidad (m/s)</label>
+            </div>
+            <div class="col s10 m8 offset-m2 offset-l2">
+              <input value="45" id="angle" type="number" class="validate">
+              <label for="angle">Ángulo (rad)</label>
+            </div>
+            <div class="col s10 m8 offset-m2 offset-l2">
+              <input value="0" id="rozamiento" type="number" class="validate">
+              <label for="angle">Rozamiento (0-1)</label>
+            </div>
+            <br><br>
+            <!--   Checkbox   -->
+            <label> <!-- class="filled-in" -->
+              <input type="checkbox" class="filled-in" id="cb" checked="checked" />
+              <span>Dibujar trayectoria</span>
+            </label>
+          </div>
+          <div class="row card-panel center-align">
+            <div class="col s12">
+              <a class="waves-effect waves-light btn red darken-1" onclick="getInputValue()">LANZAR PROYECTIL</a>
+            </div>
+            <div class="col s12">
+              <a class="waves-effect waves-light btn blue darken-1" onclick="getInputValueEJ1()">5 MISILES</a>
+            </div>
+            <div class="col s12">
+              <canvas id="parte2" height="150" width="400" style="background-color:white;">
+
+              </canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </body>
+    
+</html>
