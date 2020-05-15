@@ -362,6 +362,20 @@ function draw() {
   generateCanvas();
 }
 
+function run() {
+  const CANVAS = document.getElementById("quickhull");
+  const NPOINTS = parseInt(document.getElementById("puntos").value);
+  let pointsContainer = [];
+  if (CANVAS.getContext) {
+    const CTX = CANVAS.getContext('2d');
+    CTX.clearRect(0, 0, CANVAS.width, CANVAS.height);
+    generateRandomPoints(NPOINTS, pointsContainer, CTX, CANVAS);
+    quickHull(pointsContainer, CTX);
+  }
+  else
+    window.alert("No entra en la condicion");
+}
+
 /**
  * @description Función que mediante una promesa hace que el programa espere un
  * tiempo dado en milisegundo

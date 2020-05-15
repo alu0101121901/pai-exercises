@@ -236,11 +236,23 @@ function printTextOnCanvas(CTX, text, value, px, py) {
  */
 function main() {
   let NPOINTS_ = prompt("Numero de puntos a generar: ", "500");
-  const CANVAS = document.getElementById("mandelbrot");
-  if(CANVAS.getContext) {
-    const CTX = CANVAS.getContext('2d');
-    monteCarloRepresentation(NPOINTS_, CTX);
-    drawMandelbrotOnCanvas(CTX, CANVAS);
+  const CANVAS_ = document.getElementById("mandelbrot");
+  if(CANVAS_.getContext) {
+    const CTX_ = CANVAS_.getContext('2d');
+    monteCarloRepresentation(NPOINTS_, CTX_);
+    drawMandelbrotOnCanvas(CTX_, CANVAS_);
   }
+}
 
+const CANVAS = document.getElementById("mandelbrot");
+const CTX = CANVAS.getContext('2d');
+
+function representation() {
+  CTX.clearRect(0, 0, 340, 100);
+  let NPOINTS_ = parseInt(document.getElementById("puntos").value);
+  monteCarloRepresentation(NPOINTS_, CTX);
+}
+
+function draw () {
+  drawMandelbrotOnCanvas(CTX, CANVAS);
 }

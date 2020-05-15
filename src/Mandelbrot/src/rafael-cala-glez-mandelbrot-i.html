@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cala González</title>
+    <!-- Librerías de Materialize -->
+    <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Compiled and minified JavaScript -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Fuente de la página -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles-life.css"> -->
+    <script defer src="mandelbrot.js"></script>
+  
+  </head>
+  
+  <body class="black" >
+    <header class="hide-on-med-and-down" id="panel-header">
+      <nav>
+        <div class="nav-wrapper black">
+          <a class="brand-logo">Cala Gonzalez <b>Rafael</b> | Mandelbrot</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../docu/rafael-cala-glez-mandelbrot-doc.html">Documentación</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="black" id="panel-bouncing">
+      <div class="row">
+        <div class="col s12 m7 offset-l1 offset-m1" id="canvas-container">
+          <canvas id="mandelbrot" height="600" width="800" style="background-color: paleturquoise; border: 3px solid black;">
+            <p>Default text. The browser is not compatible whit canvas</p></canvas>
+        </div>
+        <div class="col s12 m2 offset-l1 offset-m1">
+          <div class="row card-panel center-align">
+            <div class="col s12">
+              <input value="10000" id="puntos" type="number" class="validate">
+              <label for="puntos">Numero de puntos para Montecarlo</label>
+            </div>
+            <div class="col s12">
+              <a class="waves-effect waves-light btn red darken-1" onclick="representation()">MonteCarlo</a>
+            </div>
+            <div class="col s12">
+              <a class="waves-effect waves-light btn blue darken-1" onclick="draw()">Dibujar Mandelbrot</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </body>
+    
+</html>
