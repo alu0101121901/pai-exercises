@@ -35,12 +35,12 @@ const HEADER_ELEMENT = document.getElementById("panel-header");
 const CANVAS_CONTAINER = document.getElementById("canvas-container");
 const CANVAS_BOUNCING = document.getElementById("bouncing");
 // Tomar todo el alto del viewport menos la altura del header
-CANVAS_BOUNCING.height = window.innerHeight - HEADER_ELEMENT.clientHeight - 40; 
-CANVAS_BOUNCING.width = CANVAS_CONTAINER.clientWidth;
+CANVAS_BOUNCING.height = window.innerHeight - HEADER_ELEMENT.clientHeight - 20; 
+CANVAS_BOUNCING.width = CANVAS_CONTAINER.clientWidth -10;
 const CONTEXT_BOUNCING = CANVAS_BOUNCING.getContext("2d");
 const BOUNCING_BALLS = new ClassBouncingBallsContainer(CANVAS_BOUNCING, CONTEXT_BOUNCING);
 
-BOUNCING_BALLS.addBouncingBalls(1);
+BOUNCING_BALLS.addBouncingBalls(10);
 
 /**
  * @description Función que actualiza la posición de las bolas, actualizándose

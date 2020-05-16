@@ -73,7 +73,7 @@ class BouncingBallsContainer extends ClassPainter {
    * @description Método que añade una bouncing ball al contenedor
    */
   addBouncingBall() {
-    let newBouncingBall = new ClassBouncingBall(this.canvas_, this.ctx_, this.random(-10, 10), this.random(10, -10), this.random(this.width_ * 0.01, this.width_ - this.width_ * 0.01),
+    let newBouncingBall = new ClassBouncingBall(this.canvas_, this.ctx_, this.random(-4, 4), this.random(-4, 4), this.random(this.width_ * 0.01, this.width_ - this.width_ * 0.01),
     this.random(this.width_ * 0.01, this.height_ - this.width_ * 0.01), this.randomColor());
     this.bouncingBalls_.push(newBouncingBall);
   }
@@ -113,7 +113,7 @@ class BouncingBallsContainer extends ClassPainter {
    * @description Método que limpia el tablero.
    */
   clear() {
-    this.ctx_.fillStyle = BACKGROUND_COLOR;
+    this.ctx_.fillStyle = "rgba(0,0,0,0.4)";
     this.ctx_.fillRect(0, 0, this.width_, this.height_);
   }
 }
