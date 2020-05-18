@@ -40,7 +40,7 @@ CANVAS_BOUNCING.width = CANVAS_CONTAINER.clientWidth -10;
 const CONTEXT_BOUNCING = CANVAS_BOUNCING.getContext("2d");
 const BOUNCING_BALLS = new ClassBouncingBallsContainer(CANVAS_BOUNCING, CONTEXT_BOUNCING);
 
-BOUNCING_BALLS.addBouncingBalls(10);
+BOUNCING_BALLS.addBouncingBalls(1);
 
 /**
  * @description Función que actualiza la posición de las bolas, actualizándose
